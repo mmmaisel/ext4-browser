@@ -1,0 +1,45 @@
+########################################################################
+
+All icons are based on the following ones, taken from
+http://openiconlibrary.sourceforge.net
+
+original filename			/ author or src	/ license
+
+blockdevice-2.png			/ crystal 		/ LGPL-2.1
+dialog-cancel-2.png			/ crystal		/ LGPL-2.1
+document-new-7.png			/ crystal_clear / LGPL-2.1
+drive-harddisk-6.png		/ nuvola		/ LGPL-2.1
+edit-add.png				/ crystal		/ LGPL-2.1
+edit-cut-2.png				/ crystal		/ LGPL-2.1
+edit-rename.png				/ oxygen		/ CC-BY-SA 3.0 or LGPL
+folder-yellow.png			/ crystal		/ LGPL-2.1
+quickopen.png				/ oxygen		/ CC-BY-SA 3.0 or LGPL
+run-build.png				/ crystal		/ LGPL-2.1
+uninstall-product.png		/ crystal		/ LGPL-2.1
+
+## Used resources in individual icons
+
+add-file.png			/ document-new-7.png, edit-add.png
+add-folder.png			/ folder-yellow.png, edit-add.png
+close-image.png			/ document-new-7.png, drive-harddisk-6.png, uninstall-product.png
+copy-file.png			/ document-new-7.png
+cut-file.png			/ document-new-7.png, edit-cut-2.png
+ext4-browser			/ drive-harddisk-6.png
+extract-file.png		/ document-new-7.png, run-build.png
+disk-small-png			/ drive-harddisk-6.png
+delete-file.png			/ document-new-7.png, dialog-cancel-2.png
+file-small.png			/ document-new-7.png
+folder-small.png		/ folder-yellow.png
+new-folder.png			/ folder-yellow.png
+new-image.png			/ document-new-7.png, drive-harddisk-6.png
+open-image.png			/ document-new-7.png, drive-harddisk-6.png, run-build.png
+open-disk.png			/ drive-harddisk-6.png, run-build.png
+partition-small.png		/ drive-harddisk-6.png, blockdevice-2.png
+paste-file.png			/ document-new-7.png, run-build.png
+rename-file.png			/ edit-rename.png
+write-image.png			/ drive-harddisk-6.png, quickopen.png
+
+All modified icons are licensed under the terms of the LPGL-2.1.
+Copyright (c) 2017, Max Maisel
+
+########################################################################

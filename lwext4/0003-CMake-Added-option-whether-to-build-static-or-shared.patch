@@ -1,0 +1,40 @@
+From a0973826d3c80e85db10f6121dd30b6597ee7829 Mon Sep 17 00:00:00 2001
+From: Max <max.maisel@posteo.de>
+Date: Thu, 1 Mar 2018 17:20:35 +0100
+Subject: [PATCH 3/6] CMake: Added option whether to build static or shared
+ library
+
+---
+ src/CMakeLists.txt | 10 ++++++++--
+ 1 file changed, 8 insertions(+), 2 deletions(-)
+
+diff --git a/src/CMakeLists.txt b/src/CMakeLists.txt
+index 82d6a6b..527664a 100644
+--- a/src/CMakeLists.txt
++++ b/src/CMakeLists.txt
+@@ -1,8 +1,14 @@
+ 
++option(LWEXT4_BUILD_SHARED_LIB "Build shared library" OFF)
++
+ #LIBRARY
+ include_directories(.)
+ aux_source_directory(. LWEXT4_SRC)
+-add_library(lwext4 STATIC ${LWEXT4_SRC})
++if(LWEXT4_BUILD_SHARED_LIB)
++  add_library(lwext4 SHARED ${LWEXT4_SRC})
++else()
++  add_library(lwext4 STATIC ${LWEXT4_SRC})
++endif()
+ 
+ if  (DEFINED SIZE)
+     add_custom_target(lib_size ALL DEPENDS lwext4 COMMAND ${SIZE} liblwext4.a)
+@@ -13,4 +19,4 @@ endif()
+ if  (DEFINED INSTALL_LIB)
+ INSTALL(TARGETS lwext4 DESTINATION /usr/local/lib)
+ INSTALL(DIRECTORY ${PROJECT_BINARY_DIR}/include/. DESTINATION /usr/local/include/lwext4)
+-endif()
+\ No newline at end of file
++endif()
+-- 
+2.7.4
+

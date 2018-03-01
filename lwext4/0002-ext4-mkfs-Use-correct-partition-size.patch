@@ -1,0 +1,25 @@
+From 976e1849187be32c4e2b656d683194d43f1dd3b9 Mon Sep 17 00:00:00 2001
+From: Max <max.maisel@posteo.de>
+Date: Thu, 1 Mar 2018 17:18:15 +0100
+Subject: [PATCH 2/6] ext4-mkfs: Use correct partition size
+
+---
+ src/ext4_mkfs.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/src/ext4_mkfs.c b/src/ext4_mkfs.c
+index 5942055..649c272 100644
+--- a/src/ext4_mkfs.c
++++ b/src/ext4_mkfs.c
+@@ -709,7 +709,7 @@ int ext4_mkfs(struct ext4_fs *fs, struct ext4_blockdev *bd,
+ 	bd->fs = fs;
+ 
+ 	if (info->len == 0)
+-		info->len = bd->bdif->ph_bcnt * bd->bdif->ph_bsize;
++		info->len = bd->part_size;
+ 
+ 	if (info->block_size == 0)
+ 		info->block_size = 4096; /*Set block size to default value*/
+-- 
+2.7.4
+
