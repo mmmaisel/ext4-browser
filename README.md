@@ -36,10 +36,7 @@ install_name_tool -change /path/to/libwx_osx_cocoau_adv-3.0.0.2.0.dylib @executa
 ```
 
 #### lwext4
-* Get the latest lwext4 sources from https://github.com/gkostka/lwext4.
-* Apply the supplied lwext4 patches.
-
-Now run:
+Get the latest lwext4 sources from https://github.com/gkostka/lwext4. Then run:
 ```
 cmake -DLWEXT4_BUILD_SHARED_LIB=ON /path/to/lwext4/source
 make
@@ -68,7 +65,6 @@ make
 ```
 #### lwext4
 * Get the latest lwext4 sources from https://github.com/gkostka/lwext4.
-* Apply the supplied lwext4 patches.
 * Run CMake with the following settings:
 ```
 SYSTEM_NAME=Windows
@@ -83,7 +79,7 @@ Library Mode= Search only in Target Root
 Include Mode= Search only in Target Root
 LWEXT4_BUILD_SHARED_LIB=ON
 ```
-* Now run "make"
+Now run "make"
 #### Deployment
 Put all .dll's below, the icons folder and the .exe file into a folder. Done!
 ```
